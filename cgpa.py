@@ -43,8 +43,11 @@ def main():
         semester_gpas.append(gpa)
         st.write("\n")
 
-    cgpa = sum(semester_gpas) / len(semester_gpas)
-    st.success(f"Your Cumulative GPA (cGPA) for {num_semesters} semesters is: {cgpa:.2f}")
+    if semester_gpas:
+        cgpa = sum(semester_gpas) / len(semester_gpas)
+        st.success(f"Your Cumulative GPA (cGPA) for {num_semesters} semesters is: {cgpa:.2f}")
+    else:
+        st.warning("No semesters entered. Please enter at least one semester.")
 
 if __name__ == "__main__":
     main()
