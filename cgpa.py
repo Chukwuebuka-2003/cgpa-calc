@@ -34,8 +34,8 @@ def main():
 
         for i in range(num_courses):
             course_name = st.text_input(f"Enter the name of course {i + 1}:", key=f"course_name_{semester}_{i}")
-            credits = int(st.number_input(f"Enter the credit hours for course {i + 1}:"))
-            grade = st.text_input(f"Enter the grade for course {i + 1} (e.g., A, B, C, etc.):")
+            credits = int(st.number_input(f"Enter the credit hours for course {i + 1}:", key=f"credits_{semester}_{i}"))
+            grade = st.text_input(f"Enter the grade for course {i + 1} (e.g., A, B, C, etc.):", key=f"grade_{semester}_{i}")
             course_info.append({'name': course_name, 'credits': credits, 'grade': grade})
 
         gpa = calculate_gpa(course_info)
