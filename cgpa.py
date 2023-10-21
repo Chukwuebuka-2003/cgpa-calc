@@ -33,7 +33,7 @@ def main():
         course_info = []
 
         for i in range(num_courses):
-            course_name = st.text_input(f"Enter the name of course {i + 1}:")
+            course_name = st.text_input(f"Enter the name of course {i + 1}:", key=f"course_name_{semester}_{i}")
             credits = int(st.number_input(f"Enter the credit hours for course {i + 1}:"))
             grade = st.text_input(f"Enter the grade for course {i + 1} (e.g., A, B, C, etc.):")
             course_info.append({'name': course_name, 'credits': credits, 'grade': grade})
